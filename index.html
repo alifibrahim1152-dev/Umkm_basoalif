@@ -3,281 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Bakso Project - Bakso Autentik Manggarai</title>
+    <title>Bakso Legenda Manggarai - Rasa yang Melegenda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #c62828;
-            --primary-dark: #8e0000;
-            --secondary-color: #ff9800;
-            --light-color: #fff8e1;
-            --dark-color: #5d4037;
-            --text-color: #333333;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --accent-color: #A0522D;
+            --light-color: #F5DEB3;
+            --dark-color: #5D2906;
+            --text-color: #333;
+            --white: #fff;
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
             background-color: #f9f5f0;
-            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,50 Q50,10 80,50 T140,50" stroke="%23ffccbc" fill="none" stroke-width="0.5"/></svg>');
-        }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Roboto Slab', serif;
-            font-weight: 600;
-            color: var(--dark-color);
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
+            color: var(--text-color);
+            line-height: 1.6;
         }
         
         /* Header Styles */
         header {
-            background-color: white;
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid var(--secondary-color);
         }
         
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        
-        .logo {
+        .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            margin-bottom: 1rem;
         }
         
-        .logo i {
-            color: var(--primary-color);
-            font-size: 2rem;
-        }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-        }
-        
-        .logo span {
+        .logo-icon {
+            font-size: 2.5rem;
+            margin-right: 15px;
             color: var(--secondary-color);
         }
         
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: var(--dark-color);
-            font-weight: 500;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: var(--primary-color);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1559314809-2b99056a8c4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 0;
-            border-radius: 0 0 20px 20px;
-        }
-        
-        .hero h2 {
-            font-size: 2.8rem;
-            color: white;
-            margin-bottom: 20px;
+        .logo-text h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            color: #f0f0f0;
+        .logo-text p {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-style: italic;
         }
         
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 14px 32px;
-            border-radius: 50px;
+        .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem;
+        }
+        
+        .highlight {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--dark-color);
+            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .nav-link {
+            color: var(--white);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 500;
         }
         
-        .cta-button:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(198, 40, 40, 0.4);
+        .nav-link:hover, .nav-link.active {
+            background-color: var(--secondary-color);
         }
         
-        /* Menu Section */
-        .section-title {
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--light-color);
+        }
+        
+        h2 {
+            color: var(--primary-color);
             text-align: center;
-            margin: 60px 0 40px;
+            margin-bottom: 2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--secondary-color);
+            font-size: 1.8rem;
             position: relative;
         }
         
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--dark-color);
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-        
-        .section-title h2:after {
+        h2:after {
             content: '';
             position: absolute;
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-color);
-            bottom: 0;
+            bottom: -3px;
             left: 50%;
             transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent-color);
         }
         
-        .menu-container {
+        /* Menu Styles */
+        .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
+            gap: 2rem;
         }
         
         .menu-item {
-            background-color: white;
-            border-radius: 15px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
         }
         
         .menu-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
-        .menu-icon {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: var(--light-color);
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-        }
-        
-        .menu-icon i {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-        }
-        
-        .menu-image {
+        .menu-img {
             height: 200px;
-            background-color: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .menu-image:before {
-            content: '';
-            position: absolute;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(transparent, rgba(0,0,0,0.1));
-        }
-        
-        .bowl-icon {
-            color: #8d6e63;
-            font-size: 5rem;
-            opacity: 0.9;
+            object-fit: cover;
+            border-bottom: 3px solid var(--secondary-color);
         }
         
         .menu-content {
-            padding: 25px;
+            padding: 1.5rem;
         }
         
-        .menu-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--primary-dark);
-        }
-        
-        .menu-description {
-            color: #666;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
+        .menu-title {
+            font-size: 1.4rem;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
         }
         
         .menu-price {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px dashed #ddd;
-        }
-        
-        .price {
-            font-size: 1.5rem;
-            font-weight: 700;
             color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
         }
         
-        /* Contact Section */
-        .contact-section {
+        .menu-desc {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .menu-ingredients {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .ingredient-tag {
             background-color: var(--light-color);
-            padding: 60px 0;
+            color: var(--dark-color);
+            padding: 0.3rem 0.8rem;
             border-radius: 20px;
-            margin-bottom: 60px;
+            font-size: 0.8rem;
         }
         
+        /* Contact Styles */
         .contact-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 30px;
+            gap: 2rem;
+            justify-content: center;
+            align-items: flex-start;
         }
         
         .contact-info {
@@ -285,492 +227,449 @@
             min-width: 300px;
         }
         
-        .contact-info h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--primary-dark);
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
         
-        .contact-info p {
-            margin-bottom: 25px;
+        .contact-method {
+            display: flex;
+            align-items: center;
+            padding: 1.2rem;
+            background-color: var(--light-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            background-color: #eed9b7;
+            transform: translateX(5px);
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: var(--primary-color);
+            width: 50px;
+            text-align: center;
+        }
+        
+        .contact-text h3 {
+            margin-bottom: 0.3rem;
+            color: var(--dark-color);
+        }
+        
+        .contact-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
             font-size: 1.1rem;
         }
         
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
+        .contact-link:hover {
+            text-decoration: underline;
+            color: var(--accent-color);
         }
         
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 1.3rem;
-            transition: all 0.3s;
-        }
-        
-        .social-link:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-5px);
-        }
-        
-        .contact-form {
+        .map-container {
             flex: 1;
             min-width: 300px;
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .form-group input, .form-group textarea, .form-group select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
             border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
+            overflow: hidden;
+            border: 3px solid var(--secondary-color);
         }
         
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
+        .map-placeholder {
+            height: 300px;
+            background-color: #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            text-align: center;
         }
         
-        .submit-button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 14px 30px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            width: 100%;
-        }
-        
-        .submit-button:hover {
-            background-color: var(--primary-dark);
+        .map-placeholder i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
         }
         
         /* Footer */
         footer {
             background-color: var(--dark-color);
-            color: white;
-            padding: 40px 0 20px;
+            color: var(--white);
+            padding: 2.5rem 0 1.5rem;
             text-align: center;
         }
         
         .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .social-links {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 30px;
-            margin-bottom: 30px;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
         }
         
-        .footer-column {
-            flex: 1;
-            min-width: 250px;
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
         }
         
-        .footer-column h4 {
-            color: var(--light-color);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-column a:hover {
-            color: var(--secondary-color);
+        .social-icon:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
         }
         
         .copyright {
-            padding-top: 20px;
-            border-top: 1px solid #555;
-            color: #aaa;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
+            opacity: 0.8;
         }
         
-        .location-badge {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: var(--dark-color);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-top: 15px;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 15px;
+            .nav-container {
+                flex-wrap: wrap;
             }
             
-            nav ul {
-                gap: 15px;
+            .nav-link {
+                padding: 0.5rem 1rem;
+                margin: 0.2rem;
+                font-size: 0.9rem;
             }
             
-            .hero h2 {
-                font-size: 2.2rem;
+            .logo-text h1 {
+                font-size: 1.8rem;
             }
             
-            .hero p {
-                font-size: 1rem;
+            section {
+                padding: 1.5rem;
             }
             
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .contact-container {
-                flex-direction: column;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .menu-container {
+            .menu-grid {
                 grid-template-columns: 1fr;
             }
             
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
+            .contact-method {
+                padding: 1rem;
             }
-            
-            .hero {
-                padding: 70px 0;
-            }
-            
-            .hero h2 {
-                font-size: 1.8rem;
-            }
+        }
+        
+        /* Traditional Elements */
+        .traditional-border {
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            position: relative;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .traditional-border:before {
+            content: "❖";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--white);
+            color: var(--primary-color);
+            padding: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .batik-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238b4513' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
         }
     </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
+        <div class="logo-container">
+            <div class="logo-icon">
                 <i class="fas fa-utensils"></i>
-                <h1>The <span>Bakso</span> Project</h1>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Beranda</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#about">Tentang Kami</a></li>
-                    <li><a href="#contact">Pesan Online</a></li>
-                </ul>
-            </nav>
+            <div class="logo-text">
+                <h1>Bakso Legenda Manggarai</h1>
+                <p>Rasa yang Melegenda sejak 2010</p>
+            </div>
         </div>
+        <p class="tagline">Nikmati kehangatan bakso dengan cita rasa <span class="highlight">tradisional autentik</span> di jantung Manggarai</p>
     </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <h2>Bakso Autentik dengan Rasa Tradisional</h2>
-            <p>Dibuat dengan resep turun-temurun, kuah kaldu 12 jam, dan daging pilihan. Nikmati kehangatan bakso kami yang menggugah selera.</p>
-            <div class="location-badge">
-                <i class="fas fa-map-marker-alt"></i> Lokasi Strategis di dekat Manggarai, Jakarta
-            </div>
-            <a href="#menu" class="cta-button">Lihat Menu Lengkap</a>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="nav-link active">Beranda</a>
+            <a href="#menu" class="nav-link">Menu Bakso</a>
+            <a href="#about" class="nav-link">Tentang Kami</a>
+            <a href="#contact" class="nav-link">Pesan Sekarang</a>
         </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="menu">
-        <div class="container">
-            <div class="section-title">
-                <h2>Menu Spesial Kami</h2>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Selamat Datang di Bakso Legenda Manggarai</h2>
+            <div class="traditional-border batik-pattern">
+                <p>Sejak 2010, Bakso Legenda Manggarai telah menghadirkan kenikmatan bakso dengan resep turun-temurun yang menjaga cita rasa autentik Indonesia. Setiap mangkuk sajian kami diracik dengan bahan-bahan pilihan dan dimasak dengan penuh dedikasi.</p>
+                <p>Terletak strategis di dekat Stasiun Manggarai, kami menjadi tempat favorit bagi warga sekitar, pelajar, dan pekerja untuk menikmati hidangan hangat yang mengenyangkan dan menggugah selera.</p>
             </div>
+        </section>
+        
+        <!-- Menu Section -->
+        <section id="menu">
+            <h2>Menu Andalan Kami</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Semua menu menggunakan daging sapi pilihan dan bumbu racikan khusus</p>
             
-            <div class="menu-container">
+            <div class="menu-grid">
                 <!-- Menu Item 1 -->
                 <div class="menu-item">
-                    <div class="menu-icon">
-                        <i class="fas fa-bowl-food"></i>
-                    </div>
-                    <div class="menu-image">
-                        <i class="fas fa-bowl-rice bowl-icon"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Bakso Biasa" class="menu-img">
                     <div class="menu-content">
-                        <h3>Bakso Spesial</h3>
-                        <p class="menu-description">7 butir bakso campur (sapi & ayam) + mie + tahu + pangsit + sayuran segar. Kuah kaldu kental 12 jam.</p>
-                        <div class="menu-price">
-                            <span class="price">Rp 18.000</span>
-                            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20pesan%20Bakso%20Spesial" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Pesan Sekarang</a>
+                        <h3 class="menu-title">Bakso Biasa</h3>
+                        <div class="menu-price">Rp 15.000</div>
+                        <p class="menu-desc">5 butir bakso sapi ukuran sedang dengan kuah kaldu sapi yang gurih, disajikan dengan mie kuning, tahu, dan taburan seledri.</p>
+                        <div class="menu-ingredients">
+                            <span class="ingredient-tag">Daging Sapi</span>
+                            <span class="ingredient-tag">Mie Kuning</span>
+                            <span class="ingredient-tag">Tahu</span>
+                            <span class="ingredient-tag">Kuah Kaldu</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Menu Item 2 -->
                 <div class="menu-item">
-                    <div class="menu-icon">
-                        <i class="fas fa-bowl-food"></i>
-                    </div>
-                    <div class="menu-image">
-                        <i class="fas fa-bowl-rice bowl-icon"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1559314809-2b99056a8c4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Bakso Spesial" class="menu-img">
                     <div class="menu-content">
-                        <h3>Bakso Super</h3>
-                        <p class="menu-description">10 butir bakso sapi + mie + tahu + pangsit + ceker/isi tulang + sayuran lengkap. Sangat mengenyangkan!</p>
-                        <div class="menu-price">
-                            <span class="price">Rp 22.000</span>
-                            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20pesan%20Bakso%20Super" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Pesan Sekarang</a>
+                        <h3 class="menu-title">Bakso Spesial</h3>
+                        <div class="menu-price">Rp 18.000</div>
+                        <p class="menu-desc">7 butir bakso sapi dengan komposisi daging lebih banyak, dilengkapi pangsit goreng, tahu, dan sayuran segar.</p>
+                        <div class="menu-ingredients">
+                            <span class="ingredient-tag">Daging Sapi Premium</span>
+                            <span class="ingredient-tag">Pangsit Goreng</span>
+                            <span class="ingredient-tag">Sayuran</span>
+                            <span class="ingredient-tag">Kuah Kaldu Spesial</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Menu Item 3 -->
                 <div class="menu-item">
-                    <div class="menu-icon">
-                        <i class="fas fa-bowl-food"></i>
-                    </div>
-                    <div class="menu-image">
-                        <i class="fas fa-bowl-rice bowl-icon"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1563379091339-03246963d9d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Bakso Mercon" class="menu-img">
                     <div class="menu-content">
-                        <h3>Bakso Urat</h3>
-                        <p class="menu-description">5 butir bakso urat sapi + kuah kaldu kental + mie + tauge. Tekstur kenyal dengan potongan urat sapi asli.</p>
-                        <div class="menu-price">
-                            <span class="price">Rp 20.000</span>
-                            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20pesan%20Bakso%20Urat" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Pesan Sekarang</a>
+                        <h3 class="menu-title">Bakso Mercon</h3>
+                        <div class="menu-price">Rp 20.000</div>
+                        <p class="menu-desc">6 butir bakso sapi isi cabai rawit yang meledak di mulut, disajikan dengan kuah pedas level bisa dipilih.</p>
+                        <div class="menu-ingredients">
+                            <span class="ingredient-tag">Bakso Isi Cabai</span>
+                            <span class="ingredient-tag">Kuah Pedas</span>
+                            <span class="ingredient-tag">Tahu Bakso</span>
+                            <span class="ingredient-tag">Level Pedas</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Menu Item 4 -->
                 <div class="menu-item">
-                    <div class="menu-icon">
-                        <i class="fas fa-bowl-food"></i>
-                    </div>
-                    <div class="menu-image">
-                        <i class="fas fa-bowl-rice bowl-icon"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1559314809-2b99056a8c4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Bakso Beranak" class="menu-img">
                     <div class="menu-content">
-                        <h3>Bakso Mercon</h3>
-                        <p class="menu-description">5 butir bakso isi cabai rawit/sambal + mie + tahu + kuah pedas level bisa dipilih. Untuk pecinta pedas!</p>
-                        <div class="menu-price">
-                            <span class="price">Rp 20.000</span>
-                            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20pesan%20Bakso%20Mercon" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Pesan Sekarang</a>
+                        <h3 class="menu-title">Bakso Beranak</h3>
+                        <div class="menu-price">Rp 20.000</div>
+                        <p class="menu-desc">1 butir bakso jumbo berisi telur puyuh dikelilingi 4 bakso kecil, disajikan dengan tahu isi dan pangsit.</p>
+                        <div class="menu-ingredients">
+                            <span class="ingredient-tag">Bakso Jumbo</span>
+                            <span class="ingredient-tag">Telur Puyuh</span>
+                            <span class="ingredient-tag">Tahu Isi</span>
+                            <span class="ingredient-tag">Pangsit</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Menu Item 5 -->
                 <div class="menu-item">
-                    <div class="menu-icon">
-                        <i class="fas fa-bowl-food"></i>
-                    </div>
-                    <div class="menu-image">
-                        <i class="fas fa-bowl-rice bowl-icon"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Bakso Ayam" class="menu-img">
                     <div class="menu-content">
-                        <h3>Bakso Keju</h3>
-                        <p class="menu-description">5 butir bakso isi keju mozzarella + mie + kuah kaldu bening. Lelehkan keju dalam setiap gigitan.</p>
-                        <div class="menu-price">
-                            <span class="price">Rp 23.000</span>
-                            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20pesan%20Bakso%20Keju" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Pesan Sekarang</a>
+                        <h3 class="menu-title">Bakso Ayam</h3>
+                        <div class="menu-price">Rp 16.000</div>
+                        <p class="menu-desc">6 butir bakso ayam kenyal dengan kuah kaldu ayam yang ringan namun tetap gurih, cocok untuk yang tidak terlalu suka daging sapi.</p>
+                        <div class="menu-ingredients">
+                            <span class="ingredient-tag">Daging Ayam</span>
+                            <span class="ingredient-tag">Bihun</span>
+                            <span class="ingredient-tag">Kuah Ayam</span>
+                            <span class="ingredient-tag">Tahu Putih</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Menu Item 6 -->
                 <div class="menu-item">
-                    <div class="menu-icon">
-                        <i class="fas fa-bowl-food"></i>
-                    </div>
-                    <div class="menu-image">
-                        <i class="fas fa-bowl-rice bowl-icon"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1600804340584-c6db0d6d8e4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Paket Komplit" class="menu-img">
                     <div class="menu-content">
-                        <h3>Bakso Telur Puyuh</h3>
-                        <p class="menu-description">5 butir bakso isi telur puyuh + mie + pangsit + sayuran. Kombinasi bakso dan telur yang sempurna.</p>
-                        <div class="menu-price">
-                            <span class="price">Rp 20.000</span>
-                            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20pesan%20Bakso%20Telur%20Puyuh" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Pesan Sekarang</a>
+                        <h3 class="menu-title">Paket Bakso Komplit</h3>
+                        <div class="menu-price">Rp 20.000</div>
+                        <p class="menu-desc">Perpaduan sempurna 5 bakso sapi, 2 bakso keju, dan 2 bakso urat dengan dual kuah (bening & merah pedas) plus minuman gratis.</p>
+                        <div class="menu-ingredients">
+                            <span class="ingredient-tag">Bakso Campur</span>
+                            <span class="ingredient-tag">Dual Kuah</span>
+                            <span class="ingredient-tag">Minuman Gratis</span>
+                            <span class="ingredient-tag">Komplit</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Pesan Online Sekarang</h2>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2>Mengapa Memilih Bakso Legenda?</h2>
+            <div class="traditional-border">
+                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Kelebihan Kami</h3>
+                        <ul style="padding-left: 1.5rem;">
+                            <li style="margin-bottom: 0.8rem;">Resep turun-temurun dengan cita rasa autentik</li>
+                            <li style="margin-bottom: 0.8rem;">Bahan-bahan segar dipilih setiap hari</li>
+                            <li style="margin-bottom: 0.8rem;">Proses pembuatan bakso tanpa pengawet</li>
+                            <li style="margin-bottom: 0.8rem;">Pelayanan ramah dan cepat</li>
+                            <li style="margin-bottom: 0.8rem;">Harga terjangkau untuk kualitas premium</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; min-width: 250px; text-align: center;">
+                        <div style="font-size: 4rem; color: var(--secondary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <p><strong>Bakso Terfavorit Manggarai 2023</strong></p>
+                        <p style="font-size: 0.9rem; color: #666;">Berdasarkan polling warga Manggarai</p>
+                    </div>
+                </div>
             </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Pesan Sekarang</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Pesan bakso favorit Anda melalui kontak berikut, kami siap antar ke lokasi Anda di sekitar Manggarai</p>
             
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Hubungi Kami</h3>
-                    <p>Pesan bakso kami melalui WhatsApp, Instagram, atau kunjungi langsung kedai kami di dekat Manggarai. Kami siap melayani pesanan online dengan pengantaran cepat.</p>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; text-align: center;">Hubungi Kami</h3>
                     
-                    <div>
-                        <h4>Kontak Pemesananan:</h4>
-                        <p><i class="fas fa-phone"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/6281234567890">+62 812-3456-7890</a></p>
-                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@thebaksoproject.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> <strong>Alamat:</strong> Jl. Manggarai Utara No. 123, Jakarta Selatan</p>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://wa.me/6281234567890" class="social-link" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://instagram.com/thebaksoproject" class="social-link" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://facebook.com/thebaksoproject" class="social-link" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://goo.gl/maps/example" class="social-link" target="_blank">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </a>
+                    <div class="contact-methods">
+                        <!-- WhatsApp -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>WhatsApp Order</h3>
+                                <a href="https://wa.me/6281234567890?text=Halo%20Bakso%20Legenda%2C%20saya%20mau%20pesan" class="contact-link" target="_blank">+62 812-3456-7890</a>
+                                <p>Pesan via WhatsApp untuk respon cepat</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Instagram -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Instagram</h3>
+                                <a href="https://instagram.com/baksolegenda.manggarai" class="contact-link" target="_blank">@baksolegenda.manggarai</a>
+                                <p>Follow untuk update menu dan promo spesial</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Telepon Langsung</h3>
+                                <a href="tel:+62213456789" class="contact-link">(021) 3456-789</a>
+                                <p>Jam operasional: 09.00 - 21.00 WIB</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Location -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Lokasi Kami</h3>
+                                <p class="contact-link">Jl. Manggarai Utara I No. 15, Jakarta Selatan</p>
+                                <p>Dekat Stasiun Manggarai (5 menit jalan kaki)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <h3>Form Pemesanan Cepat</h3>
-                    <form id="orderForm">
-                        <div class="form-group">
-                            <label for="name">Nama Lengkap</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Nomor WhatsApp</label>
-                            <input type="tel" id="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="menu">Pilih Menu</label>
-                            <select id="menu" required>
-                                <option value="">-- Pilih Menu --</option>
-                                <option value="Bakso Spesial">Bakso Spesial - Rp 18.000</option>
-                                <option value="Bakso Super">Bakso Super - Rp 22.000</option>
-                                <option value="Bakso Urat">Bakso Urat - Rp 20.000</option>
-                                <option value="Bakso Mercon">Bakso Mercon - Rp 20.000</option>
-                                <option value="Bakso Keju">Bakso Keju - Rp 23.000</option>
-                                <option value="Bakso Telur Puyuh">Bakso Telur Puyuh - Rp 20.000</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="notes">Catatan Tambahan</label>
-                            <textarea id="notes" placeholder="Contoh: tingkat kepedasan, tambahan mie, dll."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-button">Kirim Pesanan via WhatsApp</button>
-                    </form>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Lokasi Bakso Legenda Manggarai</h3>
+                        <p>Jl. Manggarai Utara I No. 15, Jakarta Selatan</p>
+                        <p style="margin-top: 1rem; font-size: 0.9rem;"><strong>Jam Buka:</strong> Setiap Hari 09.00 - 21.00 WIB</p>
+                        <p style="font-size: 0.9rem;"><strong>Delivery:</strong> Area Manggarai, Bukit Duri, dan sekitarnya</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
+    
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>The Bakso Project</h4>
-                    <p>Bakso autentik dengan cita rasa tradisional. Dibuat dengan bahan pilihan dan resep turun-temurun.</p>
-                    <p><i class="fas fa-clock"></i> Buka setiap hari: 09.00 - 21.00 WIB</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Menu Populer</h4>
-                    <ul>
-                        <li><a href="#menu">Bakso Spesial</a></li>
-                        <li><a href="#menu">Bakso Urat</a></li>
-                        <li><a href="#menu">Bakso Mercon</a></li>
-                        <li><a href="#menu">Bakso Keju</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Kontak Kami</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Jl. Manggarai Utara No. 123, Jakarta</li>
-                        <li><i class="fas fa-phone"></i> +62 812-3456-7890</li>
-                        <li><i class="fas fa-envelope"></i> info@thebaksoproject.com</li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <h3 style="margin-bottom: 1rem;">Bakso Legenda Manggarai</h3>
+            <p>Rasa yang Melegenda, Kenangan yang Terulang</p>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/baksolegenda.manggarai" class="social-icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/6288905595024?text=Halo%20Bakso%20Legenda%2C%20saya%20mau%20pesan" class="social-icon" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://facebook.com" class="social-icon" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://tiktok.com" class="social-icon" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 The Bakso Project. Hak Cipta Dilindungi.</p>
-                <p>Dibuat dengan <i class="fas fa-heart" style="color: #ff5252;"></i> untuk pecinta bakso Indonesia</p>
+                <p>&copy; 2023 Bakso Legenda Manggarai. Hak Cipta Dilindungi.</p>
+                <p>Dibuat dengan ❤️ untuk pecinta bakso autentik Indonesia</p>
             </div>
         </div>
     </footer>
-
+    
     <script>
-        // Form submission handler
-        document.getElementById('orderForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const menu = document.getElementById('menu').value;
-            const notes = document.getElementById('notes').value;
-            
-            // Format pesan WhatsApp
-            const message = `Halo, saya ${name}. Saya ingin memesan:\n\nMenu: ${menu}\nCatatan: ${notes || 'Tidak ada'}\n\nSilakan konfirmasi pesanan ini. Terima kasih.`;
-            
-            // Encode pesan untuk URL
-            const encodedMessage = encodeURIComponent(message);
-            
-            // Redirect ke WhatsApp dengan nomor tujuan
-            // Ganti nomor WhatsApp dengan nomor Anda
-            const whatsappURL = `https://wa.me/6281234567890?text=${encodedMessage}`;
-            
-            // Buka WhatsApp di tab baru
-            window.open(whatsappURL, '_blank');
-            
-            // Reset form
-            document.getElementById('orderForm').reset();
-        });
-        
-        // Smooth scrolling untuk navigasi
-        document.querySelectorAll('nav a').forEach(anchor => {
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
@@ -779,6 +678,13 @@
                 
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
+                    // Update active nav link
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Scroll to target
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
@@ -787,27 +693,33 @@
             });
         });
         
-        // Animasi sederhana untuk menu items saat scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
                 }
             });
-        }, observerOptions);
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
         
-        // Terapkan animasi pada setiap menu item
-        document.querySelectorAll('.menu-item').forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(20px)';
-            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(item);
+        // Simple order button functionality
+        document.querySelectorAll('.contact-link[href^="https://wa.me"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // You can add tracking or other functionality here
+                console.log('Redirecting to WhatsApp for order');
+            });
         });
     </script>
 </body>
